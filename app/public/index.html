@@ -1,0 +1,34 @@
+<!doctype html>
+ <html ng-app="myApp">
+    <head>
+    <title>My First Angular App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+ <body ng-controller="studentsData">
+  <div class="form-group">
+   <button ng-click="getAllShenkarStudents()" class="btn btn-default">function 1 - A function that gets all Shenkar students</button>
+   <br><br><br>
+    <button ng-click="getShenkarStudentGrade()"  type="submit" class="btn btn-default">function 2 - A function that gets student id as a parameter and returns his grade.</button>
+    <input ng-model="studentId"  type="text" class="form-control" id="exampleInput" placeholder="Enter id ">
+    <br><br>
+   <button ng-click="getshenkarStudentsExcellence()" type="submit" class="btn btn-default">function 3 - A function that gets stundent grade and year of study and returns only the excellence students</button>
+    <input ng-model="studentGrade" type="text" class="form-control" id="exampleInput" placeholder="Enter grade ">
+    <input ng-model="studentYear" type="text" class="form-control" id="exampleInput" placeholder="Enter year">
+
+    <section>
+      <ul ng-repeat="student in data">
+        <li><h2>id : {{student.id}}</h2></li>
+        <li>grade : {{student.grade}}</li>
+        <li>year : {{student.year}}</li>
+        <li>age : {{student.age}}</li>
+      </ul>
+
+    </section>
+
+     
+     <script src="js/script.js"></script>
+ </body>
+ </html>
